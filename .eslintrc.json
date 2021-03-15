@@ -51,14 +51,9 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          ["/^react$/", "/^react-(native|dom)$/", "/^next/"],
-          "module",
-          [
-            "/^@(assets|common|components|constants|contexts|hooks|mocks|pages|routes|services|styles|utils|shared|store)/",
-            "/^~/"
-          ],
-          ["parent", "sibling"],
-          "index"
+          ["module"],
+          ["parent"],
+          ["sibling", "index"]
         ],
         "alphabetize": { "order": "ignore", "ignoreCase": true }
       }
