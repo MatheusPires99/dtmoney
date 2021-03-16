@@ -2,7 +2,7 @@ import { Income, Outcome, Total } from '../../assets';
 
 import * as S from './styles';
 
-function Summary() {
+export function Summary() {
   return (
     <S.Container>
       <div>
@@ -34,5 +34,3 @@ function Summary() {
     </S.Container>
   );
 }
-
-export default Summary;
