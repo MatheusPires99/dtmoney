@@ -1,11 +1,10 @@
-import { useContext } from 'react';
-
-import { TransactionsContext } from '../../contexts/TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
+import { formatToPtBrCurrency } from '../../utils';
 
 import * as S from './styles';
 
 export function TransactionTable() {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
 
   return (
     <S.Container>
@@ -24,10 +23,7 @@ export function TransactionTable() {
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
               <td className={transaction.type}>
-                {new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                }).format(transaction.amount)}
+                {formatToPtBrCurrency(transaction.amount)}
               </td>
               <td>{transaction.category}</td>
               <td>
