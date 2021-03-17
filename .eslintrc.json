@@ -36,6 +36,7 @@
     "camelcase": "off",
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-unused-expressions": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
